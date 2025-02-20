@@ -23,7 +23,7 @@ const Main = () => {
 
     async function review(){
         setLoading(true)
-        const responce = await axios.post(https://aichatreviewer-backend.onrender.com/ai/get-review , {code}) ;
+        const responce = await axios.post(`${import.meta.env.VITE_BASE_URL}/ai/get-review` , {code}) ;
 setLoading(false)
       setOutput(responce.data)
     }
