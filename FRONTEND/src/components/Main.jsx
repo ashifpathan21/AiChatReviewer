@@ -30,8 +30,8 @@ setLoading(false)
     
 
   return (
-    <div className='h-screen flex p-3 sm:flex-col-reverse justify-between w-screen'>
-      <div className='relative md:h-full lg:h-full sm:h-[49.5%] sm:w-full md:w-[49.5%] lg:w-[49.5%] w-[49.5%] bg-black border-2 rounded-lg border-gray-600'>
+    <div className='h-screen flex p-3 flex-col-reverse md:flex-row lg:flex-row justify-between w-screen'>
+      <div className='relative md:h-full lg:h-full h-[49.5%] w-full md:w-[49.5%] lg:w-[49.5%]  bg-black border-2 rounded-lg border-gray-600'>
     
     <Editor 
     value={code} 
@@ -51,7 +51,7 @@ setLoading(false)
 
       </div>
 
-      <div className='md:h-full lg:h-full sm:h-[49.5%] sm:w-full text-white md:w-[49.5%] lg:w-[49.5%] overflow-scroll px-3 py-2 bg-gray-600 border-2 rounded-lg border-black'>
+      <div className='md:h-full lg:h-full h-[49.5%] w-full text-white md:w-[49.5%] lg:w-[49.5%] overflow-scroll px-3 py-2 bg-gray-600 border-2 rounded-lg border-black'>
      {loading ? <Loading /> : (
                     <Markdown rehypePlugins={[rehypeHighlight]}>
                         {output}
